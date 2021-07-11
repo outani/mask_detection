@@ -10,9 +10,9 @@ from tf_explain.core.occlusion_sensitivity import OcclusionSensitivity
 
 @st.cache(hash_funcs={cv2.dnn_Net: hash})
 def load_face_detector_and_model():
-    prototxt_path = os.path.sep.join([ "deploy.prototxt"])
-    weights_path = os.path.sep.join(["res10_300x300_ssd_iter_140000.caffemodel"])
-                                   
+    prototxt_path = os.path.sep.join(["face_detector", "deploy.prototxt"])
+    weights_path = os.path.sep.join(["face_detector",
+                                    "res10_300x300_ssd_iter_140000.caffemodel"])
     cnn_net = cv2.dnn.readNet(prototxt_path, weights_path)
 
     return cnn_net
