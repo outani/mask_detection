@@ -5,4 +5,9 @@ opencv-python-headless==4.2.0.32
 streamlit == 0.59.0
 tensorflow == 2.0.1
 tf-explain == 0.2.1
+libsm6
+libxrender1
+libfontconfig1
+libice6
+
 
